@@ -17,10 +17,9 @@ namespace Calculator
             InitializeComponent();
         }
         bool isTypingNumber = false;
-        enum PhepToan { Cong, Tru, Nhan, Chia }
+        enum PhepToan { Cong, Tru, Nhan, Chia, Can, PhanTram}
         PhepToan pheptoan;
         double nho;
-        
         private void NhapSo(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -46,6 +45,8 @@ namespace Calculator
                 case "-": pheptoan = PhepToan.Tru;break;
                 case "*": pheptoan = PhepToan.Nhan;break;
                 case "/":pheptoan = PhepToan.Chia;break;
+                case "√":pheptoan = PhepToan.Can;break;
+                case "%": pheptoan = PhepToan.PhanTram;break;
             }
             nho = double.Parse(lblShow.Text);
             isTypingNumber = false;
@@ -60,6 +61,8 @@ namespace Calculator
                 case PhepToan.Tru: ketqua = nho - tam;break;
                 case PhepToan.Nhan: ketqua = nho * tam;break;
                 case PhepToan.Chia: ketqua = nho / tam;break;
+                case PhepToan.Can: ketqua = Math.Sqrt(nho);break;
+                case PhepToan.PhanTram:ketqua = nho / 100;break;
             }
             lblShow.Text = ketqua.ToString();
         }
@@ -88,5 +91,7 @@ namespace Calculator
                     break;
             }
         }
+
+        
     }
 }

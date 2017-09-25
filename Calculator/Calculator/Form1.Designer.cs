@@ -222,6 +222,7 @@
             this.btnCan.TabIndex = 12;
             this.btnCan.Text = "√";
             this.btnCan.UseVisualStyleBackColor = true;
+            this.btnCan.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnPhanTram
             // 
@@ -232,6 +233,7 @@
             this.btnPhanTram.TabIndex = 7;
             this.btnPhanTram.Text = "%";
             this.btnPhanTram.UseVisualStyleBackColor = true;
+            this.btnPhanTram.Click += new System.EventHandler(this.NhapPhepToan);
             // 
             // btnCong
             // 
