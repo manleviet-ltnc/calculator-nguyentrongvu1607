@@ -61,6 +61,7 @@
             this.btnNho.TabIndex = 1;
             this.btnNho.Text = "C";
             this.btnNho.UseVisualStyleBackColor = true;
+            this.btnNho.Click += new System.EventHandler(this.Xoahet);
             // 
             // btnThapPhan
             // 
@@ -71,6 +72,7 @@
             this.btnThapPhan.TabIndex = 19;
             this.btnThapPhan.Text = ".";
             this.btnThapPhan.UseVisualStyleBackColor = true;
+            this.btnThapPhan.Click += new System.EventHandler(this.ThapPhan);
             // 
             // btn0
             // 
@@ -92,6 +94,7 @@
             this.btnDoiDau.TabIndex = 17;
             this.btnDoiDau.Text = "-/+";
             this.btnDoiDau.UseVisualStyleBackColor = true;
+            this.btnDoiDau.Click += new System.EventHandler(this.DoiDau);
             // 
             // btn3
             // 
@@ -168,6 +171,7 @@
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "BackSpace";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.Xoamotkitu);
             // 
             // btnBang
             // 
@@ -222,7 +226,7 @@
             this.btnCan.TabIndex = 12;
             this.btnCan.Text = "√";
             this.btnCan.UseVisualStyleBackColor = true;
-            this.btnCan.Click += new System.EventHandler(this.NhapPhepToan);
+            this.btnCan.Click += new System.EventHandler(this.Can);
             // 
             // btnPhanTram
             // 
@@ -233,7 +237,7 @@
             this.btnPhanTram.TabIndex = 7;
             this.btnPhanTram.Text = "%";
             this.btnPhanTram.UseVisualStyleBackColor = true;
-            this.btnPhanTram.Click += new System.EventHandler(this.NhapPhepToan);
+            this.btnPhanTram.Click += new System.EventHandler(this.PhanTram);
             // 
             // btnCong
             // 
