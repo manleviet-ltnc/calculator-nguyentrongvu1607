@@ -28,7 +28,12 @@ namespace Calculator
         private void NhapSo(string so)
         {
             if (isTypingNumber)
+            {
+                if (lblShow.Text == "0")
+                    lblShow.Text = "";
+
                 lblShow.Text += so;
+            }
             else
             {
                 lblShow.Text = so;
@@ -110,7 +115,7 @@ namespace Calculator
         private void Xoamotkitu(object sender, EventArgs e)
         {
             if (lblShow.Text != "")
-                lblShow.Text = (lblShow.Text).Substring(0, lblShow.Text.Length - 1);
+                lblShow.Text = lblShow.Text.Remove(lblShow.Text.Length - 1);
             if(lblShow.Text=="")
                 lblShow.Text="0.";
         }
@@ -122,7 +127,18 @@ namespace Calculator
 
         private void ThapPhan(object sender, EventArgs e)
         {
-            lblShow.Text = (double.Parse(lblShow.Text) / 10).ToString();
+            if(lblShow.Text.Contains("."))
+            {
+                if (lblShow.Text == "0.")
+                {
+                    lblShow.Text = "";
+                    NhapSo("0.");
+                }
+                return;
+            }
+
+
+            lblShow.Text = lblShow.Text + ".";
         }
     }
 }
